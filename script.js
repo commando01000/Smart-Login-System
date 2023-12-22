@@ -1,3 +1,4 @@
+var loginEmail = document.getElementById("sign-in-email");
 var loginPassword = document.getElementById("sign-in-password");
 var registerName = document.getElementById("sign-up-name");
 var registerEmail = document.getElementById("sign-up-email");
