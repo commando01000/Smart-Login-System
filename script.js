@@ -1,4 +1,3 @@
-git remote add origin https://github.com/commando01000/Smart-Login-System.gitvar loginEmail = document.getElementById("sign-in-email");
 var loginPassword = document.getElementById("sign-in-password");
 var registerName = document.getElementById("sign-up-name");
 var registerEmail = document.getElementById("sign-up-email");
