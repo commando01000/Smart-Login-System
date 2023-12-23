@@ -19,3 +19,30 @@ input {
 input::placeholder {
   color: white !important;
 }
+
+.circles span {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rules i {
+  color: #bb4120;
+}
+
+#box .box-content {
+  background-color: #445965 !important;
+  color: white;
+}
+
+#home h1 {
+  color: white;
+}
+
+.group {
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}

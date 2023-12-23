@@ -32,7 +32,7 @@
           <input
             id="sign-up-name"
             class="form-control my-3"
-            onblur="validName()"
+            onblur="validateName()"
             placeholder="Enter your name"
             type="text"
           />
@@ -57,6 +57,8 @@
             Already have an account?
             <a class="text-white" href="./index.html">Login</a>
           </p>
+          <div id="valid-account" class="valid-feedback">Success</div>
+
           <div id="name-error-message" class="invalid-feedback">
             name must be at least 3 character.
           </div>
@@ -68,8 +70,37 @@
             digit and one special character.
           </div>
         </div>
+        <div
+          id="box"
+          class="box-info position-absolute start-0 top-0 w-100 h-100 d-none justify-content-center align-items-center"
+        >
+          <div class="box-content p-4 rounded-2 shadow-lg">
+            <header
+              class="box-header w-100 d-flex justify-content-between align-items-center mb-4"
+            >
+              <div class="circles d-flex p-2">
+                <span class="rounded-circle me-2 bg-danger"></span>
+                <span class="rounded-circle me-2 bg-warning"></span>
+                <span class="rounded-circle me-2 bg-success"></span>
+              </div>
+              <button class="btn border-0" id="closeBtn">
+                <i class="fa-solid fa-xmark close fs-3"></i>
+              </button>
+            </header>
+            <p class="m-0 pb-2">
+              Site Username or Email is not valid, Please follow the rules below
+              :
+            </p>
+            <ol class="rules list-unstyled m-0">
+              <li>
+                <i class="fa-regular fa-circle-right p-2"></i>Account already
+                exists please login into your account !
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
     </header>
-    <script src="./script.js"></script>
+    <script src="./script-register.js"></script>
   </body>
 </html>
