@@ -1,4 +1,3 @@
-
 var welcomeMessage = document.getElementById("welcome-message");
 
 function getParameterByName(name, url) {
