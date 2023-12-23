@@ -25,8 +25,7 @@ if (localStorage.getItem("users") !== null) {
 }
 
 function validateRegisterEmail() {
-  var validRegexEmail =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var validRegexEmail = /^[a-zA-Z0-9. _-]+@[a-zA-Z0-9. -]+\. [a-zA-Z]{2,4}$/;
 
   var Email = registerEmail.value;
 

@@ -5,6 +5,14 @@ var successLoginMessage = document.getElementById("welcome-message");
 var emailErrorMessage = document.getElementById("email-error-message");
 var passwordErrorMessage = document.getElementById("password-error-message");
 
+var errorForm = document.getElementById("box");
+
+var closeErrorForm = document.getElementById("closeBtn");
+
+closeErrorForm.addEventListener("click", function () {
+  errorForm.className = errorForm.className.replace("d-flex", "d-none");
+});
+
 var users = [];
 
 if (localStorage.getItem("users") !== null) {
@@ -55,6 +63,7 @@ function validateLoginPassword() {
 }
 
 function login() {
+  check_login = 0;
   if (validateLoginEmail() && validateLoginPassword()) {
     Email = validateLoginEmail();
     Password = validateLoginPassword();
@@ -64,6 +73,10 @@ function login() {
         window.location.href =
           "./home.html?username=" + encodeURIComponent(users[i].username);
       }
+      check_login++;
+    }
+    if (check_login == users.length) {
+      errorForm.className = errorForm.className.replace("d-none", "d-flex");
     }
   }
 }
