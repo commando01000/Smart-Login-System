@@ -21,8 +21,7 @@ if (localStorage.getItem("users") !== null) {
 }
 
 function validateLoginEmail() {
-  var validRegexEmail =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var validRegexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
   var Email = loginEmail.value;
 
@@ -69,11 +68,11 @@ function login() {
     Password = validateLoginPassword();
     for (var i = 0; i < users.length; i++) {
       if (users[i].Email == Email && users[i].Password == Password) {
-        // Add username parameter to the URL
         window.location.href =
           "./home.html?username=" + encodeURIComponent(users[i].username);
+      } else {
+        check_login++;
       }
-      check_login++;
     }
     if (check_login == users.length) {
       errorForm.className = errorForm.className.replace("d-none", "d-flex");
