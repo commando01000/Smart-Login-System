@@ -91,6 +91,11 @@ function validateName() {
     registerName.classList.add("is-invalid");
     nameErrorMessage.style.display = "block";
     successRegister.style.display = "none";
+    emailErrorMessage.classList.replace("invalid-feedback", "valid-feedback");
+    passwordErrorMessage.classList.replace(
+      "invalid-feedback",
+      "valid-feedback"
+    );
     return false;
   }
 }
