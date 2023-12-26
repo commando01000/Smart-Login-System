@@ -36,6 +36,10 @@ function validateLoginEmail() {
     loginEmail.classList.remove("is-valid");
     loginEmail.classList.add("is-invalid");
     emailErrorMessage.style.display = "block";
+    passwordErrorMessage.classList.replace(
+      "invalid-feedback",
+      "valid-feedback"
+    );
     return false;
   }
 }
@@ -57,6 +61,7 @@ function validateLoginPassword() {
     loginPassword.classList.remove("is-valid");
     loginPassword.classList.add("is-invalid");
     passwordErrorMessage.style.display = "block";
+    emailErrorMessage.classList.replace("invalid-feedback", "valid-feedback");
     return false;
   }
 }

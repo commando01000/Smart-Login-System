@@ -41,6 +41,11 @@ function validateRegisterEmail() {
     registerEmail.classList.add("is-invalid");
     emailErrorMessage.style.display = "block";
     successRegister.style.display = "none";
+    passwordErrorMessage.classList.replace(
+      "invalid-feedback",
+      "valid-feedback"
+    );
+    nameErrorMessage.classList.replace("invalid-feedback", "valid-feedback");
     return false;
   }
 }
@@ -63,6 +68,8 @@ function validateRegisterPassword() {
     registerPassword.classList.add("is-invalid");
     passwordErrorMessage.style.display = "block";
     successRegister.style.display = "none";
+    emailErrorMessage.classList.replace("invalid-feedback", "valid-feedback");
+    nameErrorMessage.classList.replace("invalid-feedback", "valid-feedback");
     return false;
   }
 }
